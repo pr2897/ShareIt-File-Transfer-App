@@ -16,7 +16,7 @@ router.get('/:uuid', async (req, res) => {
       file: {
         fileName: file.fileName,
         fileSize: `${Number(file.size) / 1000}KB`,
-        downloadLink: `${process.env.APP_BASE_URL}/files/download/${file.uuid}`, //http://localhost:3000/files/download/sdfsdf
+        downloadLink: `${process.env.APP_BASE_URL}files/download/${file.uuid}`, //http://localhost:3000/files/download/sdfsdf
       },
     });
   } catch (error) {

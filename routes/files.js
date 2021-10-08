@@ -39,7 +39,7 @@ router.post('/', (req, res) => {
     });
     const response = await file.save();
     return res.status(200).json({
-      file: `${process.env.APP_BASE_URL}/files/${response.uuid}`,
+      file: `${process.env.APP_BASE_URL}files/${response.uuid}`,
     });
     //   http://localhost:3000/files/23sfsdf2323-dsfsdfsdf266a2
   });
@@ -78,7 +78,7 @@ router.post('/send', async (req, res) => {
     <h3>${emailFrom} shared a file with you</h3>
      <br>
      Please Download from Link Below <br>
-     <a href="${process.env.APP_BASE_URL}/files/download/${file.uuid}">Click to Download</a>
+     <a href="${process.env.APP_BASE_URL}files/download/${file.uuid}">Click to Download</a>
      <br>
      <b>Expires In: 24 Hours</b>
      `,
